@@ -1,0 +1,32 @@
+server:
+  port: 8088
+
+dubbo:
+  application:            #应用配置，用于配置当前应用信息，不管该应用是提供者还是消费者。
+    name: dubbo_provider
+  registry:                 #注册中心配置，用于配置连接注册中心相关信息。
+    address: zookeeper://127.0.0.1:2181
+  protocol:     #协议配置，用于配置提供服务的协议信息，协议由提供方指定，消费方被动接受。
+    name: dubbo
+    port: 20881
+  version: 1.0
+  scan:
+    base-packages: com.itheima.health.service.impl  #服务暴露与发现消费所在的package  @Service
+
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/heima?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT%2B8
+    #    url: jdbc:mysql://localhost:3306/health-heimaxx
+    username: root
+    password: root
+
+#mybatis-plus
+mybatis-plus:
+  type-aliases-package: com.itheima.health.pojo
+  configuration:
+    #   sql日志显示，这里使用标准显示
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    #  数据库中如果有类似 如  user_name 等命名，会将 _后的字母大写，这里是为了和实体类对应
+    map-underscore-to-camel-case: true
