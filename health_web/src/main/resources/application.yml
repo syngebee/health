@@ -20,4 +20,16 @@ spring:
   servlet:
     multipart:
       max-request-size: 20MB
-      max-file-size: 10MB
+      max-file-size: 20MB
+      enabled: true
+  redis:
+    database: 0
+    host: 127.0.0.1
+    port: 6379
+
+#  公钥和私钥 生成地址
+health:
+  jwt:
+    pubKeyPath: F:/keys/id_rsa.pub # 公钥地址
+    priKeyPath: F:/keys/id_rsa # 私钥地址
+    expire: 30 # 过期时间,单位分钟

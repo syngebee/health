@@ -1,0 +1,10 @@
+xxl:
+  job:
+    enabled: true
+    executor:
+      appname: health-executor   #  后续web界面配置执行器的名称
+      port: 9901
+      logpath: ${user.home}/xxl-job/logs
+      logretentiondays: -1
+    admin:
+      addresses: http://localhost:8091/xxl-job-admin  # 地址要和xxl-admin.jar 配置一致

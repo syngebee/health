@@ -51,6 +51,10 @@ public class MessageConstant {
     public static final String QUERY_SETMEALLIST_FAIL = "查询套餐列表数据失败";
     public static final String QUERY_SETMEAL_SUCCESS = "查询套餐数据成功";
     public static final String QUERY_SETMEAL_FAIL = "查询套餐数据失败";
+    public static final String EDIT_SETMEAL_SUCCESS = "编辑套餐数据成功";
+    public static final String EDIT_SETMEAL_FAIL = "编辑套餐数据失败";
+    public static final String DELETE_SETMEAL_SUCCESS = "删除套餐数据成功";
+    public static final String DELETE_SETMEAL_FAIL = "删除套餐数据失败";
     public static final String SEND_VALIDATECODE_FAIL = "验证码发送失败";
     public static final String SEND_VALIDATECODE_TIMEOUT = "验证码过期";
     public static final String SEND_VALIDATECODE_SUCCESS = "验证码发送成功";

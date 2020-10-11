@@ -9,7 +9,7 @@ dubbo:
   protocol:     #协议配置，用于配置提供服务的协议信息，协议由提供方指定，消费方被动接受。
     name: dubbo
     port: 20881
-  version: 1.0
+  #version: 1.0
   scan:
     base-packages: com.itheima.health.service.impl  #服务暴露与发现消费所在的package  @Service
 
@@ -17,7 +17,7 @@ dubbo:
 spring:
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/heima?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT%2B8
+    url: jdbc:mysql://localhost:3306/health-heima110?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT%2B8
     #    url: jdbc:mysql://localhost:3306/health-heimaxx
     username: root
     password: root

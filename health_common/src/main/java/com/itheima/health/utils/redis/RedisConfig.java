@@ -2,23 +2,22 @@ package com.itheima.health.utils.redis;
 
 
 import com.alibaba.fastjson.support.spring.FastJsonRedisSerializer;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
+import org.springframework.boot.autoconfigure.data.redis.RedisProperties;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.redis.connection.RedisConnectionFactory;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.serializer.StringRedisSerializer;
 
-import java.net.UnknownHostException;
 
 /**
  *    用原始的RedisTemplate 代码插入到redis，会产生乱码，但是用代码去查询是没有问题的，
  *    客户端查看就会出现乱码线下，直接在redis客户端操作是有问题的，所以我们都会在config包下面来设置RedisTemplate的序列化
  */
 @Configuration
+@EnableConfigurationProperties(RedisProperties.class)
 public class RedisConfig {
-
-
 
     @Bean  //  改写 redistemplate序列化机制  采用fastJson提供的序列化机制
     public RedisTemplate<Object, Object> redisTemplate(RedisConnectionFactory redisConnectionFactory) {

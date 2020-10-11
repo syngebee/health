@@ -12,6 +12,8 @@
         <module>health_api</module>
         <module>health_service</module>
         <module>health_web</module>
+        <module>health_xxl_job</module>
+        <module>health_mobileweb</module>
     </modules>
     <packaging>pom</packaging>
 
@@ -27,20 +29,6 @@
 
     <build>
         <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-                <configuration>
-                    <mainClass>com.itheima.health.ConsumerMain</mainClass>
-                </configuration>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>repackage</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
