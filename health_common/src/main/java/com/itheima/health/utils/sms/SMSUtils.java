@@ -10,11 +10,11 @@ import com.aliyuncs.http.MethodType;
 import com.aliyuncs.profile.DefaultProfile;
 
 public class SMSUtils {
-    public static final String VALIDATE_CODE = "SMS_204295027";//发送短信验证码
-    public static final String ORDER_NOTICE = "SMS_204295995";//体检预约成功通知
+    public static final String VALIDATE_CODE = "SMS_模板1";//发送短信验证码
+    public static final String ORDER_NOTICE = "SMS_模板2";//体检预约成功通知
 
     public static void registerSendCode(String sendyourTelephoneNumber,String codeNumber)  {
-        DefaultProfile profile = DefaultProfile.getProfile("cn-hangzhou", "LTAI4G8d3QWV3J8jcg6UUuRM", "byW4UOaIJ7Gm0JouiTzdkHexIHdtvB");
+        DefaultProfile profile = DefaultProfile.getProfile("cn-hangzhou", "Asskey", "Asspassword");
         IAcsClient client = new DefaultAcsClient(profile);
 
         CommonRequest request = new CommonRequest();
