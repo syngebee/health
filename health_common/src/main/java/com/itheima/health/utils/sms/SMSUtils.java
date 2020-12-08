@@ -39,7 +39,7 @@ public class SMSUtils {
 
 
     public static void appointment_Is_Ok(String sendyourTelephoneNumber,String codeNumber)  {
-        DefaultProfile profile = DefaultProfile.getProfile("cn-hangzhou", "LTAI4G8d3QWV3J8jcg6UUuRM", "byW4UOaIJ7Gm0JouiTzdkHexIHdtvB");
+        DefaultProfile profile = DefaultProfile.getProfile("cn-hangzhou", "Asskey", "Asspassword");
         IAcsClient client = new DefaultAcsClient(profile);
 
         CommonRequest request = new CommonRequest();
